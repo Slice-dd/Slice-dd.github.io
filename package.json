@@ -1,0 +1,24 @@
+{
+  "name": "slice-dd.github.io",
+  "version": "0.0.0",
+  "description": "github pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slice-dd/Slice-dd.github.io.git"
+  },
+  "keywords": [
+    "github",
+    "pages",
+    "blogs"
+  ],
+  "author": "Slice-dd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Slice-dd/Slice-dd.github.io/issues"
+  },
+  "homepage": "https://github.com/Slice-dd/Slice-dd.github.io#readme"
+}
