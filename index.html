@@ -72,8 +72,8 @@
                 var status = XHR.status;
                 if (status >= 200 && status < 300) {
 
-                    console.log(XHR.response);
-                    eval(XHR.response);
+                    var res = XHR.response;
+                    eval(res);
 
                     var position = document.getElementById('position');
                     var p = document.createElement('p');
