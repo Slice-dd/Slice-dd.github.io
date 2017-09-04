@@ -74,7 +74,8 @@
 
                     var res = XHR.response;
                     console.log(typeof res);
-                    eval(res.substring(1, res.length-1));
+                    eval(res)
+                    // eval(res.substring(1, res.length-1));
 
                     var position = document.getElementById('position');
                     var p = document.createElement('p');
