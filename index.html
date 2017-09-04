@@ -67,9 +67,10 @@
 
         XHR.onreadystatechange = function () {  
             if( XHR.readyState===4 ) {
-                var status = xhr.status;
+                var status = XHR.status;
                 if (status >= 200 && status < 300) {
                     console.log(XHR.response);
+                    console.log(XHR.responseText);
                 }
             }
         }
