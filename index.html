@@ -48,10 +48,10 @@
         <img src="./images/zz.jpg" alt="一头猪" title="一头猪">
         <p>这是我</p>
     </div>
-    <script src="https://bird.ioliu.cn/v1/?url=http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
-    <script>
 
-        console.log(remote_ip_info);
+    <div id="position"></div>
+    
+    <script>
 
         function xhr(param) {
             var xhr = null;  
@@ -71,8 +71,18 @@
             if( XHR.readyState===4 ) {
                 var status = XHR.status;
                 if (status >= 200 && status < 300) {
-                    console.log(XHR.response);
-                    console.log(XHR.responseText);
+                    eval(XHR.response);
+
+                    var position = document.getElementById('position');
+                    var p = document.createElement('p');
+                    var content = document.createTextNode(unescape(remote_ip_info.city));
+
+                    p.appendChild(content);
+
+                    position.appendChild(p);
+
+                    console.log(unescape(remote_ip_info.city));
+                   
                 }
             }
         }
