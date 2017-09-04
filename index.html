@@ -48,5 +48,33 @@
         <img src="./images/zz.jpg" alt="一头猪" title="一头猪">
         <p>这是我</p>
     </div>
+    <script>
+
+
+        function xhr(param) {
+            var xhr = null;  
+            if(window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            }else {
+                xhr = new ActiveXObject('Microsoft.XMLHTTP');
+            }   
+            return xhr;
+        }
+
+        var XHR = xhr();
+
+        XHR.open('GET', 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js', true);
+
+        XHR.onreadystatechange = function () {  
+            if( XHR.readyState===4 ) {
+                var status = xhr.status;
+                if (status >= 200 && status < 300) {
+                    console.log(XHR.response);
+                }
+            }
+        }
+
+        XHR.send()
+    </script>
 </body>
 </html>
